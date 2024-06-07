@@ -1,336 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shoe Link | Ecommerce Website Design</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 
 </head>
+
 <body>
-    <div class="header"> 
-    <div class="container">
-    <div class="navbar">
-        <div class="logo">
-            <img src="images/logo.png.png" width="125px">
-        </div>
-        <nav>
-        <ul id="MenuItems">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="productdetails.html">Details</a></li>
-            <li><a href="cart.html">View Cart</a></li>
-            <li><a href="">Account</a></li>
-        </ul>
-    </nav>
-    <img class="icon" src="images/cart icon.png.png" width="30px" height="30px">
-    <img src="images/menuicon.jpg.png" class="menu-icon" onclick="menutoggle()">
-    </div>
-    <div class="row">
-        <div class="col-2">
-        <h1>Give Your Feet <br> A New Style!</h1>
-        <p>Step into style with every click – your perfect pair 
-            awaits. <br> Stride in style find your perfect shoes today.</p>
-            <a href="" class="btn">Explore Now &#8594;</a>
-        </div>
-        <div class="col-2">
-           <img src="images/frontimg.jpg.png" width="100%">
-        </div>
-    </div>
-</div>
-</div>
-<div class="small-container">
-    <h2 class="title" >Featured Products</h2>
-    <div class="row">
-        <div id="product1"  class="col-4">
-            <img src="images/cat4.jpg.jpg" alt="">
-            <h4> Black Leather Strap Slippers </h4>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
-            <p>Rs.2000pkr</p>
-        </div>
-        <div id="product2" class="col-4">
-            <img src="images/cat3.jpg.jpg" alt="">
-            <h4>Gold Bow Fancy Slippers</h4>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
-            <p>Rs.2500pkr</p>
-        </div>
-        <div id="product3" class="col-4">
-            <img src="images/cat6.jpg.jpg" alt="">
-            <h4>Gold Leather Slippers</h4>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
-            <p>Rs.1500pkr</p>
-        </div>
-        <div id="product4" class="col-4">
-            <img src="images/cat5.jpg.jpg" alt="">
-            <h4>Crystal Chain Fancy Slippers</h4>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
-            <p>Rs.2500pkr</p>
-        </div>
-        <h2 class="title" >New Arrivals</h2>
-        <div class="row">
-            <div id="product5"  class="col-4">
-                <img src="images/cat7.jpg-Photoroom.png-Photoroom.png" alt="">
-                <h4>White Upper Gold Bottom </h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/logo.png.png" width="125px">
                 </div>
-                <p>Rs.3000pkr</p>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <!-- <li><a href="productdetails.html">Details</a></li> -->
+                        <li><a href="cart.html">View Cart</a></li>
+                        <li><a class="nav-account" href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <img class="icon" src="images/cart icon.png.png" width="30px" height="30px">
+                <img src="images/menuicon.jpg.png" class="menu-icon" onclick="menutoggle()">
             </div>
-            <div id="product6" class="col-4">
-                <img src="images/cat9.jpg-Photoroom.png-Photoroom.png" alt="">
-                <h4>Solid Black Leather</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.3000pkr</p>
-            </div>
-            <div id="product7" class="col-4">
-                <img src="images/cat8.jpg-Photoroom.png-Photoroom.png" alt="">
-                <h4>Pearls Green Slippers</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.2000pkr</p>
-            </div>
-            <div id="product8" class="col-4">
-                <img src="images/img1.jpg.png" alt="">
-                <h4>Mustard Formal Slippers</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.2000pkr</p>
-            </div>
-        </div>
             <div class="row">
-            <div id="product9" class="col-4">
-                <img src="images/cat14.jpg.png" alt="">
-                <h4>Summer Multi Wear Sandals</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+                <div class="col-2">
+                    <h1>Give Your Feet <br> A New Style!</h1>
+                    <p>Step into style with every click – your perfect pair
+                        awaits. <br> Stride in style find your perfect shoes today.</p>
+                    <a href="" class="btn">Explore Now &#8594;</a>
                 </div>
-                <p>Rs.3000pkr</p>
-            </div>
-            <div id="product10" class="col-4">
-                <img src="images/cat12.jpg.png" alt="">
-                <h4>Easy-to-wear <br>Relaxable Foan Summer Slippers</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+                <div class="col-2">
+                    <img src="images/frontimg.jpg.png" width="100%">
                 </div>
-                <p>Rs.2000pkr</p>
-            </div>
-            <div id="product11" class="col-4">
-                <img src="images/cat13.jpg.png" alt="">
-                <h4>Grey Butterfly Sandals</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.2000pkr</p>
-            </div>
-            <div id="product12" class="col-4">
-                <img src="images/cat15.jpg.png" alt="">
-                <h4>Summer Orange Wear</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.2000pkr</p>
-            </div>
-            </div>
-</div>
-<div class="offer">
-    <div class="small-container">
-        <div class="row">
-            <div class="col-2">
-             <img src="images/offer.jpg.png" class="offer-img">
-            </div>
-            <div class="col-2">
-            <p>Exclusively Available On Shoe Link</p>
-            <h1>Luxury Foam Gold Footwear</h1>
-            <small>Luxury must be comfortable, otherwise it is not luxury.Be
-                 real one, be royal one.</small><br>
-                 <a href="" class="btn">Buy Now &#8594;</a>
             </div>
         </div>
     </div>
-</div>
-<div class="testimonial">
     <div class="small-container">
-        <div class="row">
-            <div  class="col-3">
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa vitae quasi, voluptates maiores nisi quisquam harum consequuntur minima, sed, voluptatum error porro soluta.</p>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+        <h2 class="title">Featured Products</h2>
+        <div class="row featured-products">
+
+        </div>
+        <h2 class="title">New Arrivals</h2>
+        <div class="row new-arrival">
+
+        </div>
+        <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/offer.jpg.png" class="offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p>Exclusively Available On Shoe Link</p>
+                        <h1>Luxury Foam Gold Footwear</h1>
+                        <small>Luxury must be comfortable, otherwise it is not luxury.Be
+                            real one, be royal one.</small><br>
+                        <a href="" class="btn">Buy Now &#8594;</a>
+                    </div>
                 </div>
-                <img id="borjan" src="images/zahidhussainborjan.jpg.png">
-                <h3>Salman Bashir - Borjan Shoes Owner</h3>
-            </div>
-            <div class="col-3">
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa vitae quasi, voluptates maiores nisi quisquam harum consequuntur minima, sed, voluptatum error porro soluta.</p>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <img src="images/rafiquemalikmetro.jpg.png">
-                <h3>Rafique Malik - Metro Shoes Owner</h3>
-            </div>
-            <div class="col-3">
-                <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa vitae quasi, voluptates maiores nisi quisquam harum consequuntur minima, sed, voluptatum error porro soluta.</p>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <img src="images/salmanbashirchaseup.jpg.png">
-                <h3>Salman Bashir - Chase Up Owner</h3>
             </div>
         </div>
-    </div>
-</div>
-<div class="brands">
-    <div class="small-container">
-        <div class="row">
-            <div class="col-5">
-                <img src="images/budget.jpg.png">
-            </div>
-            <div class="col-5">
-                <img src="images/service.jpg.png">
-            </div>
-            <div class="col-5">
-                <img src="images/chase up.jpg.jpg">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-5">
-                <img src="images/Borjan.jpg">
-            </div>
-            <div class="col-5">
-                <img src="images/metro.jpg">
-            </div>
-            <div class="col-5">
-                <img src="images/style.jpg.jpg">
-            </div>
-        </div>
-    </div>
-</div>
-<div class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="footer-col-1">
-                <h3>Download our App</h3>
-                <p>Download App for Android and ios mobile phone.</p>
-                <div class="app-logo">
-                    <img src="images/app-logo.jpg.png">
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa vitae quasi, voluptates
+                            maiores nisi quisquam harum consequuntur minima, sed, voluptatum error porro soluta.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img id="borjan" src="images/zahidhussainborjan.jpg.png">
+                        <h3>Salman Bashir - Borjan Shoes Owner</h3>
+                    </div>
+                    <div class="col-3">
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa vitae quasi, voluptates
+                            maiores nisi quisquam harum consequuntur minima, sed, voluptatum error porro soluta.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="images/rafiquemalikmetro.jpg.png">
+                        <h3>Rafique Malik - Metro Shoes Owner</h3>
+                    </div>
+                    <div class="col-3">
+                        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel ipsa vitae quasi, voluptates
+                            maiores nisi quisquam harum consequuntur minima, sed, voluptatum error porro soluta.</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i>
+                        </div>
+                        <img src="images/salmanbashirchaseup.jpg.png">
+                        <h3>Salman Bashir - Chase Up Owner</h3>
+                    </div>
                 </div>
             </div>
-             <!-- <div class="footer-col-2">
+        </div>
+        <div class="brands">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-5">
+                        <img src="images/budget.jpg.png">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/service.jpg.png">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/chase up.jpg.jpg">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <img src="images/Borjan.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/metro.jpg">
+                    </div>
+                    <div class="col-5">
+                        <img src="images/style.jpg.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download our App</h3>
+                        <p>Download App for Android and ios mobile phone.</p>
+                        <div class="app-logo">
+                            <img src="images/app-logo.jpg.png">
+                        </div>
+                    </div>
+                    <!-- <div class="footer-col-2">
                  <img src="images/logo.png.png">
                 <p>Our Purpose is to Sustainably Make the Pleasure And Reliable Feets 
                     Accessible to Many.
                 </p>
             </div> -->
-             <div class="footer-col-3">
-                <h3>Useful Links</h3>
-                <ul>
-                    <li>Coupons</li>
-                    <li>Blog Post</li>
-                    <li>Return Policy</li>
-                    <li>Join Affilliate</li>
-                </ul>
-            </div> 
-            <div class="footer-col-4">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instagram</li>
-                    <li>Google</li>
-                </ul>
+                    <div class="footer-col-3">
+                        <h3>Useful Links</h3>
+                        <ul>
+                            <li>Coupons</li>
+                            <li>Blog Post</li>
+                            <li>Return Policy</li>
+                            <li>Join Affilliate</li>
+                        </ul>
+                    </div>
+                    <div class="footer-col-4">
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li>Facebook</li>
+                            <li>Twitter</li>
+                            <li>Instagram</li>
+                            <li>Google</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <p class="copyright">Copyright &copy; - www.ShoeLink.com</p>
             </div>
         </div>
-        <hr>
-        <p class="copyright">Copyright &copy; - www.ShoeLink.com</p>
-    </div>
-</div>  
-<script>
-    var MenuItems = document.getElementById("MenuItems");
-    MenuItems.style.maxHeight = "0px"
-    function menutoggle(){
-        if(MenuItems.style.maxHeight =="0px")
-        {
-            MenuItems.style.maxHeight = "200px";
-        }
-        else
-        {
-             MenuItems.style.maxHeight ="0px";
-        }
-    }
-    </script>
+        <script src="jquery-3.6.3.min.js"></script>
+        <script src="custom.js"></script>
+        <script src="productsHandler.js"></script>
+        <script>
+            var MenuItems = document.getElementById("MenuItems");
+            MenuItems.style.maxHeight = "0px"
+            function menutoggle() {
+                if (MenuItems.style.maxHeight == "0px") {
+                    MenuItems.style.maxHeight = "200px";
+                }
+                else {
+                    MenuItems.style.maxHeight = "0px";
+                }
+            }
+            renderProducts('.featured-products', 'featured products')
+            renderProducts('.new-arrival', 'new arrival')
+        </script>
 
 </body>
+
 </html>

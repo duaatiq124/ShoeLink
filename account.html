@@ -18,18 +18,18 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-               <a href="index.html"><img src="images/logo.png.png" width="125px"></a>
+                <a href="index.html"><img src="images/logo.png.png" width="125px"></a>
             </div>
             <nav>
                 <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="product.html">Products</a></li>
-                    <li><a href="productdetails.html">Details</a></li>
+                    <!-- <li><a href="productdetails.html">Details</a></li> -->
                     <li><a href="cart.html">View Cart</a></li>
-                    <li><a href="account.html">Account</a></li>
+                    <li><a class="nav-account" href="account.html">Account</a></li>
                 </ul>
             </nav>
-          <a href="cart.html"><img class="icon" src="images/cart icon.png.png" width="30px" height="30px"></a>
+            <a href="cart.html"><img class="icon" src="images/cart icon.png.png" width="30px" height="30px"></a>
             <img src="images/menuicon.jpg.png" class="menu-icon" onclick="menutoggle()">
         </div>
     </div>
@@ -48,15 +48,16 @@
                             <hr id="Indicator">
                         </div>
                         <form id="LoginForm">
-                            <input type="text" placeholder="Username">
-                            <input type="password" placeholder="Password">
+                            <input name="username" type="text" placeholder="Username" required minlength="6">
+                            <input name="password" type="password" placeholder="Password" required minlength="6">
                             <button type="submit" class="btn">Login</button>
                             <a href="">Forgot password</a>
                         </form>
                         <form id="RegForm">
-                            <input type="text" placeholder="Username">
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="Password">
+                            <input name="username" type="text" placeholder="Username" required minlength="6">
+                            <input name="email" type="email" placeholder="Email" required>
+                            <input name="password" type="password" placeholder="Password" required minlength="6">
+                            <input name="retype-password" type="password" placeholder="Confirm Password" required minlength="6">
                             <button type="submit" class="btn">Register</button>
                         </form>
                     </div>
@@ -64,72 +65,110 @@
             </div>
         </div>
     </div>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Download our App</h3>
-                        <p>Download App for Android and ios mobile phone.</p>
-                        <div class="app-logo">
-                            <img src="images/app-logo.jpg.png">
-                        </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/app-logo.jpg.png">
                     </div>
-                    <!-- <div class="footer-col-2">
+                </div>
+                <!-- <div class="footer-col-2">
                  <img src="images/logo.png.png">
                 <p>Our Purpose is to Sustainably Make the Pleasure And Reliable Feets 
                     Accessible to Many.
                 </p>
             </div> -->
-                    <div class="footer-col-3">
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affilliate</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Follow Us</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>Google</li>
-                        </ul>
-                    </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affilliate</li>
+                    </ul>
                 </div>
-                <hr>
-                <p class="copyright">Copyright &copy; - www.ShoeLink.com</p>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Google</li>
+                    </ul>
+                </div>
             </div>
+            <hr>
+            <p class="copyright">Copyright &copy; - www.ShoeLink.com</p>
         </div>
-        <script>
-            var MenuItems = document.getElementById("MenuItems");
-            MenuItems.style.maxHeight = "0px"
-            function menutoggle() {
-                if (MenuItems.style.maxHeight == "0px") {
-                    MenuItems.style.maxHeight = "200px";
-                }
-                else {
-                    MenuItems.style.maxHeight = "0px";
-                }
+    </div>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px"
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
             }
-        </script>
-        <script>
-            var LoginForm = document.getElementById("LoginForm");
-            var RegForm = document.getElementById("RegForm");
-            var Indicator = document.getElementById("Indicator");
-            function register(){
-                RegForm.style.transform = "translateX(0px)";
-                LoginForm.style.transform = "translateX(0px)";
-                Indicator.style.transform = "translateX(100px)";
+            else {
+                MenuItems.style.maxHeight = "0px";
             }
-            function login(){
-                RegForm.style.transform = "translateX(300px)";
-                LoginForm.style.transform = "translateX(300px)";
-                Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="custom.js"></script>
+<script src="productsHandler.js"></script>
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        $(LoginForm).submit(function (e) {
+            e.preventDefault()
+            const users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : []
+            const formDataArray = $(this).serializeArray();
+            const formDataObject = {};
+            $.each(formDataArray, function (index, field) {
+                formDataObject[field.name] = field.value;
+            });
+            const user = users.find((user) => (user.username == formDataObject['username'] && user.password == formDataObject[
+                'password']))
+            if (user) {
+                localStorage.setItem('loggedin-user', JSON.stringify(user))
+                location.href = 'index.html'
+            } else {
+                alert("Invalid Credentials")
             }
-        </script>
+        })
+        var RegForm = document.getElementById("RegForm");
+        $(RegForm).submit(function (e) {
+            e.preventDefault()
+            const formDataArray = $(this).serializeArray();
+            const formDataObject = {};
+            $.each(formDataArray, function (index, field) {
+                formDataObject[field.name] = field.value;
+            });
+
+            if (formDataObject['password'] !== formDataObject['retype-password']) {
+                alert(`Password does'nt match with confirm password`)
+                return
+            }
+            const users = localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : []
+            users.push(formDataObject)
+            localStorage.setItem('users', JSON.stringify(users))
+            localStorage.setItem('loggedin-user', JSON.stringify(formDataObject))
+            location.href = 'index.html'
+        })
+        var Indicator = document.getElementById("Indicator");
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+    </script>
 </body>
 
 </html>

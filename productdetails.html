@@ -24,9 +24,9 @@
                 <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="product.html">Products</a></li>
-                    <li><a href="productdetails.html">Details</a></li>
+                    <!-- <li><a href="productdetails.html">Details</a></li> -->
                     <li><a href="cart.html">View Cart</a></li>
-                    <li><a href="account.html">Account</a></li>
+                    <li><a class="nav-account" href="account.html">Account</a></li>
                 </ul>
             </nav>
             <a href="cart.html"><img class="icon" src="images/cart icon.png.png" width="30px" height="30px"></a>
@@ -36,20 +36,23 @@
     <div class="small-container single-product">
         <div class="row">
             <div class="col-2">
-                <img src="images/cat4.jpg.jpg" width="100%" id="ProductImg">
+                <img src="" width="100%" id="ProductImg">
             </div>
             <div class="col-2">
-                <p>Home / Slippers</p>
-                <h1>Black Leather Strap Slippers</h1>
-                <h4>Rs.2000pkr</h4>
-                <select>
-                    <option>Select Size</option>
-                    <option>Large</option>
-                    <option>Medium</option>
-                    <option>Small</option>
-                </select>
-                <input type="number" value="1">
-                <a href="" class="btn">Add To Cart</a>
+                <form class="cart-form">
+                    <p>Home / Slippers</p>
+                    <h1 id="prd-title"></h1>
+                    <h4 id="prd-price">Rs.0pkr</h4>
+                    <input type="hidden" name="id" id="prd-id">
+                    <select name="size" required>
+                        <option selected disabled>Select Size</option>
+                        <option value="lg">Large</option>
+                        <option value="md">Medium</option>
+                        <option value="sm">Small</option>
+                    </select>
+                    <input name="quantity" type="number" value="1">
+                    <button class="btn" type="submit">Add To Cart</button>
+                </form>
                 <h3>Product Details</h3>
                 <p>Give your summer wardrobe a style upgrade with the Shoe Link.
                     Team with a pair of sandals for your desired fashion. </p>
@@ -59,60 +62,11 @@
     <div class="small-container">
         <div class="row row-2">
             <h2>Related Product</h2>
-            <p>View More</p>
+            <!-- <p>View More</p> -->
         </div>
     </div>
     <div class="small-container">
-        <div class="row">
-            <div id="product1" class="col-4">
-                <img src="images/cat4.jpg.jpg" alt="">
-                <h4> Black Leather Strap Slippers </h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.2000pkr</p>
-            </div>
-            <div id="product2" class="col-4">
-                <img src="images/cat3.jpg.jpg" alt="">
-                <h4>Gold Bow Fancy Slippers</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.2500pkr</p>
-            </div>
-            <div id="product3" class="col-4">
-                <img src="images/cat6.jpg.jpg" alt="">
-                <h4>Gold Leather Slippers</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.1500pkr</p>
-            </div>
-            <div id="product4" class="col-4">
-                <img src="images/cat5.jpg.jpg" alt="">
-                <h4>Crystal Chain Fancy Slippers</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>Rs.2500pkr</p>
-            </div>
-        </div>
+        <div class="row featured-products"></div>
 
         <div class="footer">
             <div class="container">
@@ -153,6 +107,9 @@
                 <p class="copyright">Copyright &copy; - www.ShoeLink.com</p>
             </div>
         </div>
+        <script src="jquery-3.6.3.min.js"></script>
+        <script src="custom.js"></script>
+        <script src="productsHandler.js"></script>
         <script>
             var MenuItems = document.getElementById("MenuItems");
             MenuItems.style.maxHeight = "0px"
@@ -164,6 +121,21 @@
                     MenuItems.style.maxHeight = "0px";
                 }
             }
+            renderProducts('.featured-products', 'featured products')            
+        </script>
+        <script>
+            var id;
+            location.search.replace('?', '').split("&").forEach((query) => {
+                if (query.split('=')[0] == 'id') {
+                    id = query.split('=')[1]
+                }
+            })
+            const product = products.find(prd => prd.id == id)
+            $('#ProductImg').attr('src', product.thumbnail)
+            $('#prd-id').val(product.id)
+            $('#prd-title').html(product.title)
+            $('#prd-price').html(`Rs.${product.price}pkr`)
+            $(".cart-form").submit(handleCart)
         </script>
 </body>
 

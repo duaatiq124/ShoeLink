@@ -24,9 +24,9 @@
                 <ul id="MenuItems">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="product.html">Products</a></li>
-                    <li><a href="productdetails.html">Details</a></li>
+                    <!-- <li><a href="productdetails.html">Details</a></li> -->
                     <li><a href="cart.html">View Cart</a></li>
-                    <li><a href="account.html">Account</a></li>
+                    <li><a class="nav-account" href="account.html">Account</a></li>
                 </ul>
             </nav>
             <a href="cart.html"><img class="icon" src="images/cart icon.png.png" width="30px" height="30px"></a>
@@ -35,137 +35,151 @@
     </div>
     <div class="small-container cart-page">
         <table>
-            <tr>
-                <th>Product</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="images/cat4.jpg.jpg" width="50%">
-                        <div>
-                            <p>Black Leather Starp Slippers</p>
-                            <small>
-                                Price: Rs.2000pkr
-                            </small>
-                            <br>
-                            <a href="">Remove</a>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/cat4.jpg.jpg" width="50%">
+                            <div>
+                                <p>Black Leather Starp Slippers</p>
+                                <small>
+                                    Price: Rs.2000pkr
+                                </small>
+                                <br>
+                                <a href="">Remove</a>
+                            </div>
                         </div>
-                    </div>
-
-
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>Rs.2000pkr</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="images/img1.jpg.png" width="50%">
-                        <div>
-                            <p>Mustard Formal Slippers</p>
-                            <small>
-                                Price: Rs.2000pkr
-                            </small>
-                            <br>
-                            <a href="">Remove</a>
+    
+    
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs.2000pkr</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/img1.jpg.png" width="50%">
+                            <div>
+                                <p>Mustard Formal Slippers</p>
+                                <small>
+                                    Price: Rs.2000pkr
+                                </small>
+                                <br>
+                                <a href="">Remove</a>
+                            </div>
                         </div>
-                    </div>
-
-
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>Rs.2000pkr</td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="images/cat6.jpg.jpg" width="50%">
-                        <div>
-                            <p>Gold Leather Slippers</p>
-                            <small>
-                                Price: Rs.1500pkr
-                            </small>
-                            <br>
-                            <a href="">Remove</a>
+    
+    
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs.2000pkr</td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="images/cat6.jpg.jpg" width="50%">
+                            <div>
+                                <p>Gold Leather Slippers</p>
+                                <small>
+                                    Price: Rs.1500pkr
+                                </small>
+                                <br>
+                                <a href="">Remove</a>
+                            </div>
                         </div>
-                    </div>
-
-
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>Rs.1500pkr</td>
-            </tr>
+    
+    
+                    </td>
+                    <td><input type="number" value="1"></td>
+                    <td>Rs.1500pkr</td>
+                </tr>
+            </tbody>
         </table>
         <div class="total-price">
             <table>
-                <tr> 
-                <td>Subtotal</td>
-                <td>5500</td>
-            </tr>
-            <tr> 
-                <td>Delivery Charges</td>
-                <td>Rs.150pkr</td>
-            </tr>
-            <tr> 
-                <td>Total</td>
-                <td>Rs.5550pkr</td>
-            </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="subtotal">5500</td>
+                </tr>
+                <tr>
+                    <td>Delivery Charges</td>
+                    <td id="shipping">Rs.150pkr</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="total">Rs.5550pkr</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><a href="checkout.html" class="btn">Proceed to Checkout</a></td>
+                </tr>
             </table>
         </div>
     </div>
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-col-1">
-                        <h3>Download our App</h3>
-                        <p>Download App for Android and ios mobile phone.</p>
-                        <div class="app-logo">
-                            <img src="images/app-logo.jpg.png">
-                        </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Android and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="images/app-logo.jpg.png">
                     </div>
-                    <!-- <div class="footer-col-2">
+                </div>
+                <!-- <div class="footer-col-2">
                  <img src="images/logo.png.png">
                 <p>Our Purpose is to Sustainably Make the Pleasure And Reliable Feets 
                     Accessible to Many.
                 </p>
             </div> -->
-                    <div class="footer-col-3">
-                        <h3>Useful Links</h3>
-                        <ul>
-                            <li>Coupons</li>
-                            <li>Blog Post</li>
-                            <li>Return Policy</li>
-                            <li>Join Affilliate</li>
-                        </ul>
-                    </div>
-                    <div class="footer-col-4">
-                        <h3>Follow Us</h3>
-                        <ul>
-                            <li>Facebook</li>
-                            <li>Twitter</li>
-                            <li>Instagram</li>
-                            <li>Google</li>
-                        </ul>
-                    </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affilliate</li>
+                    </ul>
                 </div>
-                <hr>
-                <p class="copyright">Copyright &copy; - www.ShoeLink.com</p>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>Google</li>
+                    </ul>
+                </div>
             </div>
+            <hr>
+            <p class="copyright">Copyright &copy; - www.ShoeLink.com</p>
         </div>
-        <script>
-            var MenuItems = document.getElementById("MenuItems");
-            MenuItems.style.maxHeight = "0px"
-            function menutoggle() {
-                if (MenuItems.style.maxHeight == "0px") {
-                    MenuItems.style.maxHeight = "200px";
-                }
-                else {
-                    MenuItems.style.maxHeight = "0px";
-                }
+    </div>
+    <script src="jquery-3.6.3.min.js"></script>
+    <script src="custom.js"></script>
+    <script src="productsHandler.js"></script>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px"
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
             }
-        </script>
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+        renderCartItems()
+    </script>
+    <script>
+
+    </script>
 </body>
 
 </html>
