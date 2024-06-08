@@ -242,9 +242,15 @@ h4 a{
 }
 .testimonial #borjan{
     /* padding-top: 15px; */
-    width: 27%;
+    width: 34%;
 
 }
+.testimonial #chaseup{
+    /* padding-top: 15px; */
+    width: 28%;
+}
+
+
 .testimonial .col-3:hover{
     transform: translateY(-10px);
 }
